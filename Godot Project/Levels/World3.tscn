@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=3]
+[ext_resource path="res://LevelNumber.tscn" type="PackedScene" id=4]
+
+[node name="World3" type="Node"]
+
+[node name="Player" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 0, 0 )
+YMAX = "1472"
+
+[node name="WorldComplete" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 1504, 1280 )
+next_world = "res://Levels/World4.tscn"
+
+[node name="TileMap" parent="." index="2" instance=ExtResource( 3 )]
+
+tile_data = PoolIntArray( -196624, 0, 5, -131088, 0, 65541, -131079, 0, 196613, -65552, 0, 65541, -65539, 0, 5, -16, 0, 65541, -9, 0, 196613, -3, 0, 65541, 65520, 0, 65541, 65533, 0, 131077, 131056, 0, 65541, 131061, 0, 196613, 131070, 0, 196608, 131071, 0, 196610, 196592, 0, 65541, 262128, 0, 65541, 262135, 0, 196613, 327664, 0, 65541, 393200, 0, 65541, 393205, 0, 196613, 458736, 0, 65541, 524272, 0, 65541, 524279, 0, 196613, 589808, 0, 65541, 589822, 0, 196613, 524292, 0, 196613, 524296, 0, 196613, 524300, 0, 196613, 655344, 0, 65541, 655349, 0, 196613, 720880, 0, 65541, 655361, 0, 5, 786416, 0, 65541, 786423, 0, 196613, 720897, 0, 65541, 851952, 0, 131077, 786433, 0, 131077, 917489, 0, 196608, 917490, 0, 196609, 917491, 0, 196609, 917492, 0, 196609, 917493, 0, 196609, 917494, 0, 196609, 917495, 0, 196609, 917496, 0, 196609, 917497, 0, 196609, 917498, 0, 196609, 917499, 0, 196609, 917500, 0, 196609, 917501, 0, 196609, 917502, 0, 196609, 917503, 0, 196609, 851968, 0, 196610, 851983, 0, 196613, 1179664, 0, 196613, 1245207, 0, 5, 1310743, 0, 65541, 1376276, 0, 196608, 1376277, 0, 196609, 1376278, 0, 196609, 1376279, 0, 65543 )
+
+[node name="Label" parent="." index="3" instance=ExtResource( 4 )]
+
+margin_top = -64.0
+margin_right = 104.0
+margin_bottom = -32.0
+world_number = "3"
+
+
